@@ -1,6 +1,6 @@
 const express = require('express');
 const sql_conn = require('./services/dbService');
-const identifyRoute = require('./routes/indetifyRoute');
+const identifyRoute = require('./routes/identifyRoute');
 const PORT = 8000;
 const app = express();
 
