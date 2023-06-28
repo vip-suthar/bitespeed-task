@@ -1,4 +1,5 @@
 const { Sequelize } = require('sequelize');
+const pg = require('pg');
 const { dbConfig } = require('../config');
 
 const contactModel = require('../models/Contact.model');
@@ -22,6 +23,7 @@ module.exports = (async function () {
         password: dbConfig.password,
         database: dbConfig.database,
         dialect: dbConfig.dialect,
+        dialectModule: pg,
         pool: dbConfig.pool,
         logging: false
     });
