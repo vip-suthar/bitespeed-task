@@ -11,6 +11,9 @@ app.use(express.json());
 
 // application routes
 app.use("/", identifyRoute);
+app.use("*", (req, res) => {
+    res.send("This API is working fine");
+});
 
 // listening to incoming requests and syncing the db tables
 app.listen(PORT, async () => {
